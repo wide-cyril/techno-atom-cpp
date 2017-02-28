@@ -1,0 +1,43 @@
+\hypertarget{_stack_8h}{}\section{Stack.\+h File Reference}
+\label{_stack_8h}\index{Stack.\+h@{Stack.\+h}}
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classstack}{stack}
+\begin{DoxyCompactList}\small\item\em Stack class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_stack_8h_ae1ee3197387e0e6a61b1e4d5441ad2f5}{A\+S\+S\+E\+R\+T\+\_\+\+OK}()
+\begin{DoxyCompactList}\small\item\em Macro to test object integrity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines a stack class
+
+\begin{DoxyAuthor}{Author}
+Kirill Shirokov, 2017 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_stack_8h_ae1ee3197387e0e6a61b1e4d5441ad2f5}\label{_stack_8h_ae1ee3197387e0e6a61b1e4d5441ad2f5}} 
+\index{Stack.\+h@{Stack.\+h}!A\+S\+S\+E\+R\+T\+\_\+\+OK@{A\+S\+S\+E\+R\+T\+\_\+\+OK}}
+\index{A\+S\+S\+E\+R\+T\+\_\+\+OK@{A\+S\+S\+E\+R\+T\+\_\+\+OK}!Stack.\+h@{Stack.\+h}}
+\subsubsection{\texorpdfstring{A\+S\+S\+E\+R\+T\+\_\+\+OK}{ASSERT\_OK}}
+{\footnotesize\ttfamily \#define A\+S\+S\+E\+R\+T\+\_\+\+OK(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if} (!ok())                      \(\backslash\)
+    \{                               \(\backslash\)
+        dump();                     \(\backslash\)
+        assert(!\textcolor{stringliteral}{"stack is ok"});     \(\backslash\)
+    \}
+\end{DoxyCode}
+
+
+Macro to test object integrity. 
+

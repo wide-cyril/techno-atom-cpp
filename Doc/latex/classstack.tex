@@ -1,0 +1,209 @@
+\hypertarget{classstack}{}\section{stack Class Reference}
+\label{classstack}\index{stack@{stack}}
+
+
+Stack class.  
+
+
+
+
+{\ttfamily \#include $<$Stack.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classstack_acb2e70c8f4214e9446e9f69f69da8b94}\label{classstack_acb2e70c8f4214e9446e9f69f69da8b94}} 
+typedef int \hyperlink{classstack_acb2e70c8f4214e9446e9f69f69da8b94}{value\+\_\+type}
+\begin{DoxyCompactList}\small\item\em Element type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classstack_a65efc6bf4210228326d0a6a2813fd406}\label{classstack_a65efc6bf4210228326d0a6a2813fd406}} 
+\hyperlink{classstack_a65efc6bf4210228326d0a6a2813fd406}{stack} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{classstack_ad1417df58803f247fa6437631a1beeef}{stack} (size\+\_\+t)
+\item 
+\hyperlink{classstack_a6664e76c4bdc9b907e41e458d4324603}{stack} (const \hyperlink{classstack}{stack} \&)
+\item 
+\hyperlink{classstack_a62a3ddd238e62abed272e4557509fd23}{stack} (\hyperlink{classstack}{stack} \&\&)
+\item 
+\mbox{\Hypertarget{classstack_ae20e5d415f840f36862007e95a1dcbe7}\label{classstack_ae20e5d415f840f36862007e95a1dcbe7}} 
+\hyperlink{classstack_ae20e5d415f840f36862007e95a1dcbe7}{$\sim$stack} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hyperlink{classstack}{stack} \& \hyperlink{classstack_a405cb40f99da46e1ae97076c544866fb}{operator=} (\hyperlink{classstack}{stack} \&)
+\item 
+\hyperlink{classstack}{stack} \& \hyperlink{classstack_a413ffacb608eaa8b838bfbe078c7b554}{operator=} (\hyperlink{classstack}{stack} \&\&)
+\item 
+bool \hyperlink{classstack_a12bb4c544eb6cc7ca43cab1a8616d3db}{ok} () const
+\item 
+bool \hyperlink{classstack_a8a37d01fe5845ebf19d1f30921b93a51}{dump} () const
+\item 
+bool \hyperlink{classstack_a3d026ffa5b32a0a43d7432e8b0eecfed}{push} (\hyperlink{classstack_acb2e70c8f4214e9446e9f69f69da8b94}{value\+\_\+type})
+\item 
+\hyperlink{classstack_acb2e70c8f4214e9446e9f69f69da8b94}{value\+\_\+type} \hyperlink{classstack_a88f5bbf41acc7d70bbe1dc54ea7097a5}{pop} ()
+\item 
+size\+\_\+t \hyperlink{classstack_af92cacb24391bd58fc48788afbd375b7}{size} () const
+\item 
+size\+\_\+t \hyperlink{classstack_ad6340374ef03a5259458b8f24351b61f}{length} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Stack class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classstack_ad1417df58803f247fa6437631a1beeef}\label{classstack_ad1417df58803f247fa6437631a1beeef}} 
+\index{stack@{stack}!stack@{stack}}
+\index{stack@{stack}!stack@{stack}}
+\subsubsection{\texorpdfstring{stack()}{stack()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily stack\+::stack (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{ }\end{DoxyParamCaption})}
+
+Consturctor with parameter
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Size of stack data array \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classstack_a6664e76c4bdc9b907e41e458d4324603}\label{classstack_a6664e76c4bdc9b907e41e458d4324603}} 
+\index{stack@{stack}!stack@{stack}}
+\index{stack@{stack}!stack@{stack}}
+\subsubsection{\texorpdfstring{stack()}{stack()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily stack\+::stack (\begin{DoxyParamCaption}\item[{const \hyperlink{classstack}{stack} \&}]{ }\end{DoxyParamCaption})}
+
+Copy constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em that} & const lvalue reference to the object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classstack_a62a3ddd238e62abed272e4557509fd23}\label{classstack_a62a3ddd238e62abed272e4557509fd23}} 
+\index{stack@{stack}!stack@{stack}}
+\index{stack@{stack}!stack@{stack}}
+\subsubsection{\texorpdfstring{stack()}{stack()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily stack\+::stack (\begin{DoxyParamCaption}\item[{\hyperlink{classstack}{stack} \&\&}]{ }\end{DoxyParamCaption})}
+
+Move constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em that} & rvalue reference to the object \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classstack_a8a37d01fe5845ebf19d1f30921b93a51}\label{classstack_a8a37d01fe5845ebf19d1f30921b93a51}} 
+\index{stack@{stack}!dump@{dump}}
+\index{dump@{dump}!stack@{stack}}
+\subsubsection{\texorpdfstring{dump()}{dump()}}
+{\footnotesize\ttfamily bool stack\+::dump (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Dumper
+
+\begin{DoxyReturn}{Returns}
+Has dump made successfully 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstack_ad6340374ef03a5259458b8f24351b61f}\label{classstack_ad6340374ef03a5259458b8f24351b61f}} 
+\index{stack@{stack}!length@{length}}
+\index{length@{length}!stack@{stack}}
+\subsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily size\+\_\+t stack\+::length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Number of elements in the stack
+
+\begin{DoxyReturn}{Returns}
+Number of elements in the stack 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstack_a12bb4c544eb6cc7ca43cab1a8616d3db}\label{classstack_a12bb4c544eb6cc7ca43cab1a8616d3db}} 
+\index{stack@{stack}!ok@{ok}}
+\index{ok@{ok}!stack@{stack}}
+\subsubsection{\texorpdfstring{ok()}{ok()}}
+{\footnotesize\ttfamily bool stack\+::ok (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Silent verifier
+
+\begin{DoxyReturn}{Returns}
+Is object ok or broken 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstack_a405cb40f99da46e1ae97076c544866fb}\label{classstack_a405cb40f99da46e1ae97076c544866fb}} 
+\index{stack@{stack}!operator=@{operator=}}
+\index{operator=@{operator=}!stack@{stack}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classstack}{stack}\& stack\+::operator= (\begin{DoxyParamCaption}\item[{\hyperlink{classstack}{stack} \&}]{ }\end{DoxyParamCaption})}
+
+Copy assignment
+
+
+\begin{DoxyParams}{Parameters}
+{\em another} & lvalue reference to the object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+lvalue reference to this object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstack_a413ffacb608eaa8b838bfbe078c7b554}\label{classstack_a413ffacb608eaa8b838bfbe078c7b554}} 
+\index{stack@{stack}!operator=@{operator=}}
+\index{operator=@{operator=}!stack@{stack}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classstack}{stack}\& stack\+::operator= (\begin{DoxyParamCaption}\item[{\hyperlink{classstack}{stack} \&\&}]{ }\end{DoxyParamCaption})}
+
+Move assignment
+
+
+\begin{DoxyParams}{Parameters}
+{\em another} & rvalue reference to the object\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+lvalue reference to this object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstack_a88f5bbf41acc7d70bbe1dc54ea7097a5}\label{classstack_a88f5bbf41acc7d70bbe1dc54ea7097a5}} 
+\index{stack@{stack}!pop@{pop}}
+\index{pop@{pop}!stack@{stack}}
+\subsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily \hyperlink{classstack_acb2e70c8f4214e9446e9f69f69da8b94}{value\+\_\+type} stack\+::pop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Remove element from the stack It\textquotesingle{}ll throw exception(int), if stack is empty
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & The element to be removed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Element that was removed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstack_a3d026ffa5b32a0a43d7432e8b0eecfed}\label{classstack_a3d026ffa5b32a0a43d7432e8b0eecfed}} 
+\index{stack@{stack}!push@{push}}
+\index{push@{push}!stack@{stack}}
+\subsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily bool stack\+::push (\begin{DoxyParamCaption}\item[{\hyperlink{classstack_acb2e70c8f4214e9446e9f69f69da8b94}{value\+\_\+type}}]{ }\end{DoxyParamCaption})}
+
+Add element to the stack
+
+
+\begin{DoxyParams}{Parameters}
+{\em elem} & The element to be added\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Have adding done successfully 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classstack_af92cacb24391bd58fc48788afbd375b7}\label{classstack_af92cacb24391bd58fc48788afbd375b7}} 
+\index{stack@{stack}!size@{size}}
+\index{size@{size}!stack@{stack}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily size\+\_\+t stack\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Stack data capacity
+
+\begin{DoxyReturn}{Returns}
+Stack data capacity 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_stack_8h}{Stack.\+h}\end{DoxyCompactItemize}
