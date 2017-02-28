@@ -1,32 +1,35 @@
+//----------------------------------------------------------------
+//! @file Stack.cpp
+//! Implements member functions of stack class 
+//!
+//! @author Kirill Shirokov, 2017
+//----------------------------------------------------------------
+
 #include "stack.h"
-#include <assert.h>
 
-#define ASSERT_OK()					\
-	if (!ok())						\
-	{								\
-		dump();						\
-		assert(!"stack is ok");		\
-	}
-
-stack::stack() : count_(0), size_(init_size)
+stack::stack() :
+	count_(0), size_(init_size)
 {
 	data_ = new value_type[init_size];
 }
 
-stack::stack(size_t size) : count_(0), size_(size)
+stack::stack(size_t size) :
+	count_(0), size_(size)
 {
 	data_ = new value_type[size];
 }
 
-stack::stack(const stack& that): count_(that.count_), size_(that.size_)
+stack::stack(const stack& that) :
+	count_(that.count_), size_(that.size_)
 {
-	data_ = new value_type[size_];
 	ASSERT_OK();
+	data_ = new value_type[size_];
 	for (int i = 0; i < count_; i++)
 		data_[i] = that.data_[i];
 }
 
-stack::stack(stack&& that) : count_(that.count_), size_(that.size_), data_(that.data_)
+stack::stack(stack&& that) :
+	count_(that.count_), size_(that.size_), data_(that.data_)
 {
 	ASSERT_OK();
 	that.data_ = NULL;
@@ -46,8 +49,8 @@ stack &stack::operator=(stack &another)
 		delete[] data_;
 		size_ = another.size_;
 		count_ = another.count_;
-		data_ = new value_type[size_];
 		ASSERT_OK();
+		data_ = new value_type[size_];
 		for (int i = 0; i < count_; i++)
 			data_[i] = another.data_[i];
 	}
@@ -75,33 +78,30 @@ bool stack::ok() const
 	return !(count_ > size_ || data_ == NULL);
 }
 
-#define equ(item) _dump << "\t"#item" = " << item << '\n'
-#define equ2(item,index) _dump << "\t"#item"[" << index << "] = " << item[index] << '\n'
-
 bool stack::dump() const
 {
 	std::ofstream _dump("dump.txt");
 	if (_dump.fail())
 		return false;
-	_dump << "Stack\n{\n";
-	equ(size_);
-	equ(count_);
-	_dump << "\tdata_\n";
+
+	_dump << "Stack\n{\n"
+			<< "\tsize_ = "	   << size_
+			<< "\n\tcount_ = " << count_
+			<< "\n\tdata_";
+
 	if (data_)
 	{
-		_dump << "\t{\n\t";
+		_dump << "\n\t{";
 		for (int i = 0; i < size_; i++)
-			equ2(data_,i) << '\t';
-		_dump << "}\n";
+			_dump << "\n\t\tdata_[" << i << "] = " << data_[i];
+		_dump << "\n\t}";
 	}
 	else
-		_dump << "\t\tis NULL\n";
-	_dump << '}';
+		_dump << "\n\t\tis NULL";
+	_dump << '\n}';
 	_dump.close();
 	return true;
 }
-
-#undef equ
 
 bool stack::push(value_type elem)
 {
@@ -145,5 +145,3 @@ size_t stack::length() const
 {
 	return count_;
 }
-
-#undef ASSERT_OK
